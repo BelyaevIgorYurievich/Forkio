@@ -49,7 +49,7 @@ input::-moz-focus-inner {
   border: 0 !important;
 }
 
-header {
+.menu {
     z-index: 100;
     display: flex;
     align-items: center;
@@ -60,7 +60,7 @@ header {
     background-color: white;
 }
 
-header button {
+.menu button {
     font: 21px 'Montserrat-Bold', sans-serif;
     color: #ffffff;
     padding: 13px 40px;
@@ -358,6 +358,10 @@ nav label {
     margin-bottom: 30px;
 }
 
+.reviews-social-networks .arrow .autor {
+    color: #8d81ac;
+}
+
 .reviews-social-networks .arrow::before, .reviews-social-networks .arrow::after {
     content: "";
     width: 16px;
@@ -464,6 +468,7 @@ nav label {
     background: url('../img/second-screen.jpg') #4a3b4e no-repeat;
     padding: 10% 7% 0;
     height: auto;
+    background-size: cover;
 }
 
 .block-reviews h1 {
@@ -509,6 +514,7 @@ nav label {
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-size: cover;
 }
 
 .pricing-block ul {
@@ -521,7 +527,7 @@ nav label {
 
 .pricing-block li {
     width: 257px;
-    height: 457;
+    height: 457px;
     margin: 50px 0;
     background: rgba(103,91,106,0.6);
     transition: 0.5s;
@@ -617,7 +623,7 @@ nav label {
 }
 
 .message-block {
-    width: 100%;
+    padding: 0 9.5%;
     min-height: 150px;
     background-color: #f4f4f4;
     display: flex;
@@ -626,19 +632,15 @@ nav label {
     flex-wrap: wrap;
 }
 
-.message-block .messages {
+.message {
     display: flex;
-    flex-basis: 40%;
-    justify-content: space-around;
-    flex: 1;
-}
-
-.message-block .messages button {
-    width: 140px;
-    height: 41px;
+    flex-grow: 1;
+    justify-content: center;
 }
 
 .message-block h1 {
+    flex-grow: 1;
+    flex-wrap: nowrap;
     font: 30px 'Montserrat-Bold', sans-serif;
     color: #635c73;
     display: flex;
@@ -647,8 +649,8 @@ nav label {
 }
 
 .message-block input {
-    width: 280px;
     height: 41px;
+    flex: 0 1 225px;
     margin-right: 20px;
     border: 0;
     border-radius: 20px;
@@ -657,6 +659,8 @@ nav label {
 }
 .message-block button {
     width: 140px;
+    flex-grow: 1;
+    flex: 0 1 150px;
     height: 41px;
     border: 0;
     border-radius: 20px;
@@ -669,19 +673,12 @@ nav label {
 
 .product-news {    
     padding: 21px 11.5%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     height: auto;
     width: auto;
-}
-
-.product-news .line {
     border-bottom: 1px solid #f4f4f4;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 100%;
 }
 
 .news {
@@ -694,7 +691,7 @@ nav label {
     height: 580px;
 }
 
-.news .caption-new {
+.news header .caption-new {
     font: 28px 'Montserrat-Bold', sans-serif;
     color: #d3d1da;
 }
@@ -799,10 +796,11 @@ footer .information-company {
     max-width: 215px;
 }
 
-footer .information-company .number h4 {
+footer .information-company .number a {
     font: 30px'Montserrat-Bold', sans-serif;
     color: #3f3f3f;
     padding-bottom: 15px;
+    text-decoration: none;
 }
 
 footer .information-company .number p {
@@ -810,7 +808,7 @@ footer .information-company .number p {
     color: #848e97;
 }
 
-footer .information-company .address h4 {
+footer .information-company address .city {
     font: 17px'Montserrat-Regular', sans-serif;
     color: #323232;
     padding-bottom: 23px;
@@ -818,7 +816,7 @@ footer .information-company .address h4 {
 
 
 @media screen and (max-width: 1020px) {
-    header {
+    .menu {
         padding: 0 2%;
         width: 100%;
     }
@@ -882,4 +880,19 @@ footer .information-company .address h4 {
     .reviews-social-networks .social-networks button {
         margin: 0;
     }
+}
+
+@media screen and (max-width: 555px) {
+
+    .message-block h1 {
+        font: 25px 'Montserrat-Bold', sans-serif;
+    }
+}
+
+@media screen and (max-width: 874px) {
+
+    .product-news {
+        justify-content: center;
+    }
+
 }
