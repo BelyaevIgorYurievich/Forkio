@@ -253,12 +253,27 @@ nav label {
     justify-content: center;
     padding: 80px 0;
     position: relative;
+
+    flex-direction: column;
+}
+.service-features h1 {
+    display: flex;
+    justify-content: center;
+    font: 48px 'Montserrat-Bold', sans-serif;
+    color: #8d81ac;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.service-features .content-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
 .list-functions {
     display: flex; 
     flex-basis: 50%;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
 }
 
@@ -266,9 +281,10 @@ nav label {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    min-height: 560px;
+    justify-content: space-between;
+    height: 560px;
     align-items: center;
+    max-width: 580px;
 }
 
 .list-functions ul li {
@@ -531,6 +547,7 @@ nav label {
     margin: 50px 0;
     background: rgba(103,91,106,0.6);
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .pricing-block h1 {
@@ -688,18 +705,23 @@ nav label {
     flex-direction: column;
     align-items: baseline;
     justify-content: space-between;
-    height: 580px;
+    height: auto;
+}
+
+.news div {
+    margin-top: 30px;
 }
 
 .news header .caption-new {
     font: 28px 'Montserrat-Bold', sans-serif;
     color: #d3d1da;
+    margin-bottom: 20px;
 }
 
 .news .news-title {
     font: 16px'Montserrat-Regular', sans-serif;
     color: #8d81ac;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
 }
 
 .news .news-text {
@@ -714,7 +736,7 @@ nav label {
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
-    margin-bottom: 30px;
+    margin: 30px 0; 
 }
 
 footer {
@@ -815,7 +837,13 @@ footer .information-company address .city {
 }
 
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1080px) {
+
+
+    .list-functions ul {
+        max-width: 475px;
+    }
+
     .menu {
         padding: 0 2%;
         width: 100%;
@@ -861,12 +889,8 @@ footer .information-company address .city {
 
 @media screen and (max-width: 1330px) {
     .block-image {
-            flex-basis: 100%; 
-    }
-    .block-image img {
-        width: 453px;
-        height: 560px;
-    }            
+        display: none;
+    }         
 }
 
 @media screen and (max-width: 997px) {
