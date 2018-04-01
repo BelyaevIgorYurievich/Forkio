@@ -127,6 +127,7 @@ nav label {
     height: 800px;
     width: 100%;
     background: url('../img/first-screen.jpg') center no-repeat; 
+    background-size: cover;
 }
 
 .first-window h1 {
